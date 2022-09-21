@@ -12,20 +12,18 @@ def show_mywatchlist(request):
     'npm' : '2106635013',
     'pesan' : ""
     }
-
-
-    # film_watched = 0
-    # film_unwatched = 0
-    # for films in watchlist :
-    #     if (films.watched_movie == "Sudah") :
-    #         film_watched += 1
-    #     else :
-    #         film_unwatched += 1
+    film_watched = 0
+    film_unwatched = 0
+    for films in watchlist :
+        if (films.watched_movie == "Sudah") :
+            film_watched += 1
+        else :
+            film_unwatched += 1
     
-    # if (film_watched >= film_unwatched) :
-    #     context['pesan'] = "Selamat, kamu sudah banyak menonton!"
-    # else :
-    #     context['pesan'] = "Wah, kamu masih sedikit menonton!"
+    if (film_watched >= film_unwatched) :
+        context['pesan'] = "Selamat, kamu sudah banyak menonton!"
+    else :
+        context['pesan'] = "Wah, kamu masih sedikit menonton!"
 
     return render(request, "mywatchlist.html", context)
 
@@ -37,8 +35,8 @@ def show_json(request):
     data = MyWatchlistItem.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
-# def show_json_by_id(request, id):
-#     data = MyWatchlistItem.objects.filter(pk=id)
-#     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+def show_json_by_id(request, id):
+    data = MyWatchlistItem.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 

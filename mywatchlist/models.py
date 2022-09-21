@@ -7,4 +7,3 @@ class MyWatchlistItem(models.Model):
     movie_rate = models.IntegerField()
     release_date = models.DateField()
     movie_review = models.CharField(max_length=255)
-
