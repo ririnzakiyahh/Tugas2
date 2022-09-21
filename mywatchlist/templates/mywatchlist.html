@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1><center>😻 Tugas 3 PBP 😻</center></h1>
+
+  <h5><center>Name: Nisrina Zakiyah Aeni</center></h5>
+
+  <h5><center>Student ID: 2106635013</center></h5>
+
+  <style>
+    table,
+    th,
+    td {
+      padding: 7px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+
+  <table>
+    <tr style="background-color: darkgoldenrod;">
+      <th>Watched</th>
+      <th>Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+      <th>Review</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for movie in list_movie %}
+    <tr  style="background-color: rgb(230, 223, 206);">
+        <td>{{movie.watched_movie}}</td>
+        <td>{{movie.movie_title}}</td>
+        <td>{{movie.movie_rate}}</td>
+        <td>{{movie.release_date}}</td>
+        <td>{{movie.movie_review}}</td>
+    </tr>
+{% endfor %}
+  </table>
+
+  <h4><center> {{pesan}} </center></h4>
+
+ {% endblock content %}

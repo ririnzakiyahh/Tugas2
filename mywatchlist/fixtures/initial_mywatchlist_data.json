@@ -1,0 +1,113 @@
+[
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":1,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Spider-Man: No Way Home",
+            "movie_rate": "9",
+            "release_date": "2021-12-15",
+            "movie_review": "ini seru bangettt, the best out of the trilogy dari spider-man. TAPII endingnyaa SEDIH BGTTT karena Peternya jadi dilupain semua orang:("
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":2,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Parasite",
+            "movie_rate": "8",
+            "release_date": "2019-06-24",
+            "movie_review": "filmnyaa tuh bercerita ttg keluarga miskin yang tinggal dirumah orang kayaa, jadi mereka sekeluarga pura-pura jadi orang pinter buat jadi guru les gitu. Akhirnya pas mereka udah tinggal semua dirumah keluarga kaya itu, ada kejadian-kejadian yang gaterduga banget deh"
+
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":3,
+        "fields":{
+            "watched_movie": "Belum",
+            "movie_title": "Don't Look Up",
+            "movie_rate": "7",
+            "release_date": "2021-12-24",
+            "movie_review": "belum ditonton"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":4,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Encanto",
+            "movie_rate": "9",
+            "release_date": "2021-11-24",
+            "movie_review": "One of the best Disney movieee. Ceritanya seru banget dan banyak pesan moral yang bisa diambill. jujur nontonnya nangis:("
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":5,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Miracle in Cell No.7",
+            "movie_rate": "9",
+            "release_date": "2013-12-23",
+            "movie_review": "Filmnyaa sedihh bgt fix nangis. Tentang seorang ayah berkelainan yang dituduh ngelakuin sesuatu yang akhirnya bikin dia di penjara dan dihukum mati gitu:("
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":6,
+        "fields":{
+            "watched_movie": "Belum",
+            "movie_title": "Big Mouse",
+            "movie_rate": "8",
+            "release_date": "2022-07-13",
+            "movie_review": "belum ditonton"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":7,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Business Proposal",
+            "movie_rate": "8",
+            "release_date": "2022-02-28",
+            "movie_review": "seruu bgtttt lucuu gituu, dramanyaa ringaan bgt lucu yg romance2 gituu."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":8,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Our Beloved Summer",
+            "movie_rate": "9",
+            "release_date": "2022-12-6",
+            "movie_review": "one of the best kdrama! romance-romance yangg sedih lucu gitu, ttg sepasang kekasih SMA yang akhirnya pas gede mereka ketemu lagii"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":9,
+        "fields":{
+            "watched_movie": "Sudah",
+            "movie_title": "Pengabdi Setan 2",
+            "movie_rate": "7",
+            "release_date": "2022-08-04",
+            "movie_review": "Alurnyaa kurang jelass dan masih jauh lebih bagus Pengabdi Setan 1. Endingnya kurang memuaskan"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistitem",
+        "pk":10,
+        "fields":{
+            "watched_movie": "Belum",
+            "movie_title": "Purple Hearts",
+            "movie_rate": "6",
+            "release_date": "2022-07-23",
+            "movie_review": "belum ditonton"
+        }
+    }
+]
