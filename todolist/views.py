@@ -73,6 +73,9 @@ def delete(request, id):
 
 def status(request, update_status):
     data_status = Task.objects.get(id=update_status)
-    data_status.is_finished = True
+    if data_status.is_finished == False:
+        data_status.is_finished = True
+    else:
+        data_status.is_finished = False
     data_status.save()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
