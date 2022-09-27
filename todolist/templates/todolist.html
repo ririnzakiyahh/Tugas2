@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>To do list {{user.username}}📄</h1>
+<!-- <h3><center>Nama: Nisrina Zakiyah Aeni</center></h3> -->
+
+<style>
+    table, th{
+      padding: 5px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    td{
+      padding: 20px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+
+<table>
+  <thread>
+    <tr style="background-color: rgb(189, 216, 255);">
+      <th >Tanggal</th>
+      <th >Judul</th>
+      <th >Deskripsi</th>
+      <th >Status</th>
+      <th >Pilihan</th>
+    </tr>
+  </thread>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for list in list_todo %}
+    <tr style="background-color: rgb(250, 249, 246);" >
+        <td>{{list.date}}</td>
+        <td>{{list.title}}</td>
+        <td>{{list.description}}</td>
+        <td>
+          {% if list.is_finished %}
+              Sudah Selesai
+              {% else %}
+              Belum Selesai
+              {% endif%}
+        </td>
+        <td>
+          <button><a href="{% url 'todolist:delete' list.id %}">Delete</a></button>
+          <button><a href="{% url 'todolist:status' list.id %}">Status</a></button>
+        </td>
+    </tr>
+{% endfor %}
+</table>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<button><a href="{% url 'todolist:add' %}">Add Todo</a></button>
+
+
+{% endblock content %}

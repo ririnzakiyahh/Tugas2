@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Add Todo List</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div class = "add">
+    <h1>Mau ngapain aja nih❓</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Todo:</td>
+                <td><input type="text" name="title" placeholder="Todo" class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description" placeholder="Description" class="form-control"></td>
+            </tr>
+        </table>
+
+        <input type="submit" name="submit" value="Buat"/>
+        <input type="button" value="Kembali" onclick="history.back()"/>
+    </form>
+
+</div>
+
+{% endblock content %}
