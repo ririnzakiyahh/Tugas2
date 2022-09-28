@@ -1,6 +1,6 @@
 Link aplikasi Heroku : https://ririnapp.herokuapp.com/todolist/
 
-## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
+## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form> ?
 csrf token berguna untuk membandingkan dua token yang ditemukan pada sisi user dan pada
 sisi permintaan (request). Jika token tersebut tidak cocok maka permintaan pada form akan 
 ditolak, sedangkan jika permintaan cocok maka form akan merespons OK.
