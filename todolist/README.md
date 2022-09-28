@@ -1,7 +1,6 @@
 Link aplikasi Heroku : https://ririnapp.herokuapp.com/todolist/
 
-## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada
-potongan kode tersebut pada elemen <form>?
+## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
 csrf token berguna untuk membandingkan dua token yang ditemukan pada sisi user dan pada
 sisi permintaan (request). Jika token tersebut tidak cocok maka permintaan pada form akan 
 ditolak, sedangkan jika permintaan cocok maka form akan merespons OK.
@@ -10,18 +9,14 @@ Jika tidak terdapat potongan kode tersebut, akan terdapat beberapa route link ya
 diakses oleh orang lain. Akun kita bisa saja terhapus diluar kontrol kita jika seseorang 
 memiliki button ke href link tersebut.
 
-## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator
-seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat 
-<form> secara manual.
+## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
 Ya bisa. Form secara manual dapat kita buat dengan menggunakan method POST dan dengan
 menggunakan csrf token. Lalu kita membuat tag table dan didalamnya terdapat tr yang 
 digunakan untuk memberikan tag input beserta dengan type yang disesuaikan dengan kebutuhan. 
 Setelah itu, akan dikembalikan ke fungsi yang memanggil form jika form disubmit.
 Method request.POST.get(nama yg kita buat pada table) dapat digunakan untuk mengakses input.
 
-## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form,
-penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template
-HTML.
+## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 Data yang diinput dapat diakses karena adanya penggunaan method request.POST.get(nama yg kita buat pada table).
 Setalah itu, dengan menggunakan "Models".objects.create(nama = data input) sesuai dengan
 nama yang kita buat di todolist/models.py. Lalu data akan tersimpan pada database django dan
