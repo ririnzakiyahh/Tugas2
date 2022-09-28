@@ -17,7 +17,6 @@ def show_todolist(request):
    # apapun yang mau di akses di template, harus taro di context
     context = {
     'list_todo': data_todolist,
-    # 'nama': request.user.nama,
     }
     return render(request, "todolist.html", context)
 
