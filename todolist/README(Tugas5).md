@@ -21,15 +21,15 @@ CSS ditulis di sebuah file khusus yang berekstensi .css.
   Kekurangan: halaman akan berantakan ketika file CSS gagal dipanggil oleh file HTML. 
   
 ## Jelaskan tag HTML5 yang kamu ketahui.
-  "<h1> - <h6>" : bisa dipakai untuk ehader
-  "<p>" : untuk nulis teks
-  "<form>" : untuk membuat form yang akan disubmit
-  "<img>" : untuk import foto 
-  "<div>" : sbg wadah atau tatakan untuk elemen yang akan dibuat didalamnya.
+  < h1> - <h6 > : bisa dipakai untuk ehader
+  < p > : untuk nulis teks
+  < form > : untuk membuat form yang akan disubmit
+  < img > : untuk import foto 
+  < div > : sbg wadah atau tatakan untuk elemen yang akan dibuat didalamnya.
     
 ## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
-   - "#" : untuk select id yang ingin ditambahkan pada sebuah komponen
-   - "-" : untuk selector 
+   - " # " : untuk select id yang ingin ditambahkan pada sebuah komponen
+   - " - " : untuk selector 
    - elemen selector yang biasa digunakan, seperti h1,h2,h3.
     
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
