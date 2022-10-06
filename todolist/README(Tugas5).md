@@ -20,19 +20,19 @@ CSS ditulis di sebuah file khusus yang berekstensi .css.
   Kelebihan: ukuran file html akan menjadi lebih kecil dan struktur dari kode HTML jadi rapih
   Kekurangan: halaman akan berantakan ketika file CSS gagal dipanggil oleh file HTML. 
   
- ## Jelaskan tag HTML5 yang kamu ketahui.
-  '<h1> - <h6>' : bisa dipakai untuk ehader
-  '<p>' : untuk nulis teks
-  '<form>' : untuk membuat form yang akan disubmit
-  '<img>' : untuk import foto 
-  '<div>' : sbg wadah atau tatakan untuk elemen yang akan dibuat didalamnya.
+## Jelaskan tag HTML5 yang kamu ketahui.
+  "<h1> - <h6>" : bisa dipakai untuk ehader
+  "<p>" : untuk nulis teks
+  "<form>" : untuk membuat form yang akan disubmit
+  "<img>" : untuk import foto 
+  "<div>" : sbg wadah atau tatakan untuk elemen yang akan dibuat didalamnya.
     
- ## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
    - "#" : untuk select id yang ingin ditambahkan pada sebuah komponen
    - "-" : untuk selector 
    - elemen selector yang biasa digunakan, seperti h1,h2,h3.
     
- ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
     - Pertama, saya mengimport bootstrap pada setiap halaman HTML, yaitu pada login.html, register.html,
     add_todo.html, dan todolist.html. 
     - Selanjutnya saya mengkostumisasi template untuk halaman login, register, dan create-task
