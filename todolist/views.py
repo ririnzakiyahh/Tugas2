@@ -6,9 +6,13 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.http.response import JsonResponse, HttpResponse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
+import datetime
+import json
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -65,12 +69,12 @@ def add_todo(request):
         return response
     return render(request, "add_todo.html")
 
-def delete(request, id):
+def delete_task(request, id):
     data = Task.objects.get(id=id)
     data.delete()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
-def status(request, update_status):
+def status_task(request, update_status):
     data_status = Task.objects.get(id=update_status)
     if data_status.is_finished == False:
         data_status.is_finished = True
@@ -78,3 +82,28 @@ def status(request, update_status):
         data_status.is_finished = False
     data_status.save()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    task = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', task), content_type='application/json')
+
+def add_task_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        add_todolist = Task(
+            user = request.user,
+            title = title,
+            description = description,
+            date = datetime.datetime.now(),
+            is_finished = False,
+        )
+        add_todolist.save()
+    return JsonResponse({"task": "todolist baru"},status=200)
+
+@csrf_exempt
+def delete_task_ajax(request,id):
+    task = Task.objects.filter(pk=id)   
+    task.delete()
+    return JsonResponse({"task": "todolist dihapus"})
